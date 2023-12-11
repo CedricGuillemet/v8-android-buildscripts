@@ -49,8 +49,3 @@ export PATH="$DEPOT_TOOLS_DIR:$PATH"
 PLATFORM=$(verify_platform $1)
 
 EXTERNAL_STARTUP_DATA="false"
-
-if [[ ${PLATFORM} = "android" ]]; then
-else
-  NO_JIT="true"
-fi

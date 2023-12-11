@@ -48,9 +48,9 @@ IOS_DEPLOYMENT_TARGET="12.0"
 export PATH="$DEPOT_TOOLS_DIR:$PATH"
 PLATFORM=$(verify_platform $1)
 
+EXTERNAL_STARTUP_DATA="false"
+
 if [[ ${PLATFORM} = "android" ]]; then
-  EXTERNAL_STARTUP_DATA="true"
 else
-  EXTERNAL_STARTUP_DATA="false"
   NO_JIT="true"
 fi
